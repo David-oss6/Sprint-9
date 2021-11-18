@@ -7,7 +7,6 @@ import { BoxVidDiv, FavBtn, MyH3, VidListDiv, VidsBtn } from './styled'
 export default function VideoList() {
     const { state, setState } = useContext(DataContext)
 
-
     const handleVideoSelect = (vid) => {
         setState({
             ...state,
@@ -15,13 +14,11 @@ export default function VideoList() {
         })
     }
     const agregarFavorito = (vid) => {
-
         state.favoritos.find((el) => el === vid) ||
             setState({
                 ...state,
                 favoritos: [...state.favoritos, vid]
             })
-        console.log(state.favoritos)
     }
 
     return (
