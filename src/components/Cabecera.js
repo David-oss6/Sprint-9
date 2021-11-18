@@ -36,10 +36,7 @@ export default function Cabecera() {
 
     }
 
-    const mostrarAxios = async () => {
-        await axios(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${text}&key=AIzaSyCB1SYr-o4NWPVjjTEBakEOfK704xP7JNs`)
-            .then((res) => console.log(res))
-    }
+
 
     const style = {
         marginRight: "5px",
@@ -63,7 +60,7 @@ export default function Cabecera() {
             </SideDiv>
             <SearchDiv>
                 <button onClick={() => mostrarLocal()}>ConsoleLog LocalStorage</button>
-                <button onClick={() => mostrarAxios()}>Log Axios</button>
+
                 <br />
                 <MyInput onChange={(event) => setText(event.target.value)} placeholder="Search" type="text" />
                 <button onClick={(e) => handleSubmit(text)}><i className="fas fa-search"></i></button>
