@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Cabecera from "./components/Cabecera";
+import History from "./components/History";
+import Favorito from './components/Favorito'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+import PantallaInicial from "./components/PantallaInicial";
+import { GlobalStyle } from "./components/styled";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="row">
+          <div className="col" >
+            <Cabecera />
+          </div>
+          <div className="col" >
+            <div className="row" >
+              <Routes>
+                <Route path="/" element={<PantallaInicial />} />
+                <Route exact path="/history" element={<History />} />
+              </Routes>
+            </div>
+            <div className="row-2">
+              <History />
+              <Favorito />
+            </div>
+          </div  >
+        </div>
+      </div>
+      <GlobalStyle />
+    </Router >
   );
 }
 
 export default App;
+
+
