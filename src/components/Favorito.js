@@ -26,21 +26,24 @@ export default function Favorito() {
     }
 
     return (
-        <HisDiv>
-            {
-                state.favoritos ? state.favoritos.map((vid) => (
-                    <BoxHisDiv>
-                        <VidsBtn onClick={() => handleVideoSelect(vid)} >
-                            <img src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
-                            <MyH3>{vid.snippet.title}</MyH3>
-                        </VidsBtn>
-                        <FavBtn onClick={() => quitarFavorito(vid)} >Quitar de Favoritos</FavBtn>
-                    </BoxHisDiv>
-                ))
-                    : ""
+        <>
+            <h3 style={{ marginLeft: "200px" }} >Favoritos</h3>
+            <HisDiv>
+                {
+                    state.favoritos ? state.favoritos.map((vid) => (
+                        <BoxHisDiv>
+                            <VidsBtn onClick={() => handleVideoSelect(vid)} >
+                                <img src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
+                                <MyH3>{vid.snippet.title}</MyH3>
+                            </VidsBtn>
+                            <FavBtn onClick={() => quitarFavorito(vid)} >Quitar de Favoritos</FavBtn>
+                        </BoxHisDiv>
+                    ))
+                        : ""
 
-            }
+                }
 
-        </HisDiv>
+            </HisDiv>
+        </>
     )
 }

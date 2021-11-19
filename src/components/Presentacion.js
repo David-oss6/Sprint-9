@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { DataContext } from '../aplication/DataContext'
-import { FavBtn, PresDiv, PresIndividualDiv, VidsBtn } from './styled'
+import { FavBtn, MyH3, PresDiv, PresH3, PresIndividualDiv, VidsBtn } from './styled'
 
 export default function Presentacion() {
     const { state, setState } = useContext(DataContext)
@@ -35,23 +35,31 @@ export default function Presentacion() {
         console.log(state.favoritos)
     }
 
-    return (
-        <PresDiv>
-            {random && random.map((vid) => (
-                <PresIndividualDiv key={vid.id.videoId} >
-                    <div  >
-                        <VidsBtn onClick={() => handleVideoSelect(vid)} >
-                            <img src={vid.snippet.thumbnails.default.url} />
-                            <h3>{vid.snippet.title}</h3>
-                        </VidsBtn>
-                    </div>
-                    <div>
-                        <FavBtn onClick={() => agregarFavorito(vid)}>Agregar a Favoritos</FavBtn>
+    const h3style = {
+        marginLeft: "200px",
+    }
 
-                    </div>
-                </PresIndividualDiv>
-            ))
-            }
-        </PresDiv>
+    return (
+        <>
+            <PresH3 >Recomended for you</PresH3>
+            <PresDiv>
+                {random && random.map((vid) => (
+                    <PresIndividualDiv key={vid.id.videoId} >
+
+                        <div  >
+                            <VidsBtn onClick={() => handleVideoSelect(vid)} >
+                                <img src={vid.snippet.thumbnails.default.url} />
+                                <h3>{vid.snippet.title}</h3>
+                            </VidsBtn>
+                        </div>
+                        <div>
+                            <FavBtn onClick={() => agregarFavorito(vid)}>Agregar a Favoritos</FavBtn>
+
+                        </div>
+                    </PresIndividualDiv>
+                ))
+                }
+            </PresDiv>
+        </>
     )
 }

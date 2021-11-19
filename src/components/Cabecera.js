@@ -46,17 +46,25 @@ export default function Cabecera() {
     return (
         <div style={{ display: "flex" }}>
             <SideDiv>
-                <p style={{ fontSize: "30px", color: "white", marginLeft: "25px" }} >MENU</p>
-                <Link to="/"> <MyBtn style={{ fontSize: "20px" }}>
-                    <i style={style} className="fas fa-align-center"></i>Home
-                </MyBtn></Link>
-                <Link to="/history"><MyBtn style={{ fontSize: "20px" }}>
-                    <i style={style} className="fas fa-history"></i>History
-                </MyBtn></Link>
-                <Link to="/linked"> <MyBtn style={{ fontSize: "20px" }}>
-                    < i style={style} className="fas fa-link"></i>Linked Videos
-                </MyBtn></Link>
-                <Link to="/favoritos"> <MyBtn style={{ fontSize: "20px" }}><i style={style} className="far fa-heart"></i>Saved Videos</MyBtn></Link>
+                <ul  >MENU</ul>
+                <li>
+                    <Link to="/"> <MyBtn >
+                        <i style={style} className="fas fa-align-center"></i>Home
+                    </MyBtn></Link>
+                </li>
+                <li>
+                    <Link to="/history"><MyBtn >
+                        <i style={style} className="fas fa-history"></i>History
+                    </MyBtn></Link>
+                </li>
+                <li>
+                    <Link to="/linked"> <MyBtn >
+                        < i style={style} className="fas fa-buffer"></i>Linked Videos
+                    </MyBtn></Link>
+                </li>
+                <li>
+                    <Link to="/favoritos"> <MyBtn ><i style={style} className="far fa-heart"></i>Saved Videos</MyBtn></Link>
+                </li>
             </SideDiv>
             <SearchDiv>
                 <button onClick={() => mostrarLocal()}>ConsoleLog LocalStorage</button>

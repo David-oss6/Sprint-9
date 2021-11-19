@@ -22,23 +22,26 @@ export default function VideoList() {
     }
 
     return (
-        <VidListDiv>
-            {state.videos && state.videos.map((vid) => {
-                if (vid !== state.videos[0]) {
-                    return (
-                        <BoxVidDiv key={vid.id.videoId} >
-                            <VidsBtn onClick={() => handleVideoSelect(vid)} >
-                                <img src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
-                            </VidsBtn>
-                            <MyH3 >{vid.snippet.title}</MyH3>
-                            <FavBtn onClick={() => agregarFavorito(vid)}><i id={vid.id.videoId}
-                                className="far fa-star">
-                            </i>Agregar a Favoritos</FavBtn>
-                        </BoxVidDiv>
-                    )
+        <>
+            <h3>Related Videos</h3>
+            <VidListDiv>
+                {state.videos && state.videos.map((vid) => {
+                    if (vid !== state.videos[0]) {
+                        return (
+                            <BoxVidDiv key={vid.id.videoId} >
+                                <VidsBtn onClick={() => handleVideoSelect(vid)} >
+                                    <img src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
+                                </VidsBtn>
+                                <MyH3 >{vid.snippet.title}</MyH3>
+                                <FavBtn onClick={() => agregarFavorito(vid)}><i id={vid.id.videoId}
+                                    className="far fa-star">
+                                </i>Agregar a Favoritos</FavBtn>
+                            </BoxVidDiv>
+                        )
+                    }
+                })
                 }
-            })
-            }
-        </VidListDiv >
+            </VidListDiv >
+        </>
     )
 }

@@ -11,15 +11,25 @@ export const GlobalStyle = createGlobalStyle`
 		background-color: #01579b;
         color: #e0e0e0;
         font-size: 20px;
+
+        @media(max-width: 990px){
+           font-size: 15px;
+        }
+        @media(max-width: 700px){
+           font-size: 10px;
+        }
 	}
 
     i{
         border: none;
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         background-color: #01579b;
 
-        
+        @media(max-width: 990px){
+        font-size: 15px;
+    }
+       
     }
     button {
         text-decoration: none;
@@ -37,6 +47,19 @@ export const GlobalStyle = createGlobalStyle`
             cursor: pointer;
         }
     }
+
+    ul {
+        font-size: 25px;
+        color: white;
+        margin-left: 25px;
+
+        @media(max-width: 990px){
+            font-size: 20px;
+        } 
+    }
+    li{
+        list-style: none;        
+    }
 `;
 
 /// APP ****************
@@ -46,6 +69,12 @@ export const AppDiv = styled.div`
     flex-flow: column wrap;
     justify-content: space-between;
     margin-left: 200px;
+
+    @media(max-width: 990px){
+           font-size: 15px;
+            margin-left: 120px;
+        }
+        
 `
 
 export const FavBtn = styled.button`
@@ -67,6 +96,11 @@ align-content: center;
 border: black solid 1px;
 gap: 50px;
 
+ @media(max-width: 990px){
+           width: 120px; ;
+           
+        }
+
 
 `
 export const SearchDiv = styled.div`
@@ -77,6 +111,11 @@ height: 50px;
 margin-left: 180px;
 padding: 10px 0 10px 10px;
 border: black solid 1px;
+
+@media(max-width: 990px){
+           margin-left: 120px; ;
+
+        }
 `
 
 export const MyBtn = styled.button`
@@ -84,16 +123,25 @@ export const MyBtn = styled.button`
     background-color:#024274;
     color: white;
     border: none;
+    font-size: 20px;
 
     &:hover {
         cursor: pointer;
     }
+
+    @media(max-width: 990px){
+           font-size: 13px;
+
+        }
+
+     
 `
 export const MyInput = styled.input`
     width: 600px;
     height: 30px;
     border-radius: 50px;
     margin-right: 7px;
+    padding-left: 10px;
 @media(max-width: 990px){
     width: 400px;
 }
@@ -187,8 +235,7 @@ export const BoxVidDiv = styled.div`
     margin:5px;
     padding-bottom: 5px;
     text-align: center;
-   
-        
+           
     width: 200px;
     border-radius: 15px;
     font-size: 15px;
@@ -198,6 +245,11 @@ export const BoxVidDiv = styled.div`
     @media(max-width: 1100px) {
         width: 150px;
     }
+
+    /* @media(max-width: 600px) {
+        width: 100px;
+        
+    } */
 `
 
 export const VidsBtn = styled.div`
@@ -210,6 +262,15 @@ export const MyH3 = styled.h3`
     font-size: 13px;
 `
 /// PRESENTACION
+
+export const PresH3 = styled.h3`
+margin-left: 200px;
+margin-top: 10px;
+
+@media(max-width: 990px){
+    margin-left: 140px;
+}
+`
 
 export const PresDiv = styled.div`
     display: flex;
@@ -225,6 +286,10 @@ export const PresDiv = styled.div`
     color: black;
     background-color:#01579b;
 
+    @media(max-width: 990px){
+    margin-left: 140px;
+}
+
     @media( max-width: 768px) {
         flex-flow: column nowrap;
         justify-content: center;
@@ -233,11 +298,9 @@ export const PresDiv = styled.div`
 `
 
 export const PresIndividualDiv = styled.div`
-   
-    margin:5px;
-    padding: 5px;
-    text-align: center;
-    flex-shrink: 6;
+       margin:5px;
+        text-align: center;
+    
 
     
     width: 200px;
@@ -246,8 +309,12 @@ export const PresIndividualDiv = styled.div`
     color: black;
     background-color: white ;
 
+     @media(max-width: 990px){
+    width: 150px;
+}
+
     @media( max-width: 768px) {
-        flex-shrink: 6;
+        
         justify-self: center;
         align-self: center;
     }
