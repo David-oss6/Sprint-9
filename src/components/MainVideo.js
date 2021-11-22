@@ -25,7 +25,7 @@ export default function MainVideo() {
                 ...state,
                 favoritos: [...state.favoritos, vid]
             })
-        console.log(state.favoritos)
+
     }
 
     return (
