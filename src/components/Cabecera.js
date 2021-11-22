@@ -18,22 +18,29 @@ export default function Cabecera() {
     const handleSubmit = async (e) => {
         const d = await axios(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${e}&key=AIzaSyCB1SYr-o4NWPVjjTEBakEOfK704xP7JNs`)
         const res = d.data.items;
-        if (state.viewedHistory.length === 10) {
-            const list = state.viewedHistory.splice(0, 2)
+        if (state.viewedHistory !== res) {
+            if (state.viewedHistory.length === 10) {
+                const list = state.viewedHistory.splice(0, 2)
+
+            }
+            setState({
+                ...state,
+                mainVideo: res[0],
+                videos: res,
+                viewedHistory: [...state.viewedHistory, res[0], res[1]]
+            })
+
         }
-        setState({
-            ...state,
-            mainVideo: res[0],
-            videos: res,
-            viewedHistory: [...state.viewedHistory, res[0], res[1]]
-        })
+
     }
 
     return (
         <>
             <div className="searchBar"  >
                 <input className="search-input" onChange={(event) => setText(event.target.value)} placeholder="Search" type="text" />
-                <button className="searchBtn" onClick={(e) => handleSubmit(text)}><i className="fas fa-search search-i"></i></button>
+                <Link to="/">
+                    <button className="searchBtn" onClick={(e) => handleSubmit(text)}><i className="fas fa-search search-i"></i></button>
+                </Link>
                 <button onClick={() => mostrarLocal()}>ConsoleLog State</button>
             </div>
             <ul className="menu" >

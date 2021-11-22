@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { DataContext } from '../aplication/DataContext'
-import { BoxVidDiv, FavBtn, VidListDiv } from './styled'
+import { BoxVidDiv, VidListDiv } from './styled'
 import { Link } from 'react-router-dom'
 
 export default function Presentacion() {
@@ -23,8 +23,6 @@ export default function Presentacion() {
                 mainVideo: vid,
                 videoList: res.data.items
             }))
-
-        console.log(state)
     }
 
     const agregarFavorito = (vid) => {
@@ -35,8 +33,6 @@ export default function Presentacion() {
             })
         console.log(state.favoritos)
     }
-
-
 
     return (
         <div className="row presentacion-row">
