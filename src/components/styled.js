@@ -245,7 +245,7 @@ h3{
     }
 
     .handleSubmitBtn{
-      background-color: #526c80 ;
+      background-color: white ;
       border: none;
       border-radius: 15px;
     }
