@@ -23,32 +23,30 @@ export default function VideoList() {
 
     return (
         <div className="row ">
-            <div className="relatedVideo">
-                <a name="related"></a>
-                <h2>Related Videos</h2>
-                <VidListDiv>
-                    {state.videos && state.videos.map((vid) => {
-                        if (vid !== state.videos[0]) {
-                            return (
-                                <BoxVidDiv key={vid.id.videoId} >
-                                    <div>
-                                        <button className="handleSubmitBtn" onClick={() => handleVideoSelect(vid)} >
-                                            <img className="related-img" src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
-                                        </button>
-                                        <h3 >{vid.snippet.title}</h3>
-                                    </div>
-                                    <button className="btn btn-warning bg-pill pe-2 ps-2" onClick={() => agregarFavorito(vid)}>Add to<i
-                                        className="far fa-star">
-                                    </i></button>
-                                </BoxVidDiv>
-                            )
-                        }
-                    })
+            <h2>Related Videos</h2>
+            <VidListDiv>
+                {state.videos && state.videos.map((vid) => {
+                    if (vid !== state.videos[0]) {
+                        return (
+                            <BoxVidDiv key={vid.id.videoId} >
+                                <div>
+                                    <button className="handleSubmitBtn" onClick={() => handleVideoSelect(vid)} >
+                                        <img className="related-img" src={vid.snippet.thumbnails.default.url} alt={vid.snippet.title} />
+                                    </button>
+                                    <h3 >{vid.snippet.title}</h3>
+                                </div>
+                                <button className="btn btn-warning bg-pill pe-2 ps-2" onClick={() => agregarFavorito(vid)}>Add to<i
+                                    className="far fa-star">
+                                </i></button>
+                            </BoxVidDiv>
+                        )
                     }
+                })
+                }
 
-                </VidListDiv >
+            </VidListDiv >
 
-            </div>
+
         </div>
     )
 }

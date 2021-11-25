@@ -135,19 +135,15 @@ font-size: 10px;
 
 // Contenido Principal ******
 .contenido{
-    display: flex;
-    flex-flow: column;
-    margin: 50px;
+    /* display: flex;
+    flex-flow: column; */
+    margin: 20px 50px;
     @media(max-width: 620px){
         margin-top: 100px;
     }   
     @media(max-width: 580px){
         margin-top: 50px;
-    }
-
-       
-
-           
+    }           
 }
 
 .historial-favoritos{
@@ -170,13 +166,7 @@ font-size: 10px;
     padding: 5px;  
    
   
-     /* @media(max-width: 1315px){
-    max-width: 950px;
- }
-  @media(max-width: 1200px){
-     margin-top: 90px;
-     padding-right: 50px;
- } */
+     
 
     @media(max-width: 620px){
      margin-top: 90px;
