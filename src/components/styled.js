@@ -194,10 +194,10 @@ font-size: 10px;
        height: 100px;
     }
 }
-.bag{
+/* .bag{
     border: black solid 2px;
     border-radius: 15px;
-}
+} */
 .bag1{
     margin-right: 5px;
     border-radius: 15px;

@@ -38,10 +38,10 @@ function App() {
 
             </Switch>
             <div className="row historial-favoritos " >
-              <div className="col-6 bag1" >
+              <div className="col bag1" >
                 <History />
               </div>
-              <div className="col-6 bag2">
+              <div className="col bag2">
                 <Favorito />
               </div>
             </div>
