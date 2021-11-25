@@ -76,10 +76,10 @@ export default function Registro() {
         <div>
 
             {
-                user ? <div>
+                user ? <LogSignDiv>
                     {user}
-                    <button onClick={() => logOut()}>Log Out</button>
-                </div>
+                    <button className="log-sign-btn" onClick={() => logOut()}>LogOut</button>
+                </LogSignDiv>
                     : <div>
                         <LogSignDiv>
                             <button className=" log-sign-btn" onClick={() => logButton(1)}>LogIn </button>
