@@ -6,48 +6,51 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: sans-serif;    
 }
-
+.main-row{
+    background-color: #1F1D36;
+    padding: 0;
+}
 // Cabecera  ************
 .cabecera {
     height: 100%;  
     max-width: 250px; 
     min-width: 120px;
     background-image: linear-gradient(0deg,   #1F1D36 0%, #14274E 35%) ;
-
     
     @media(max-width: 620px){
         background-color: #1F1D36;
-        background-image: none;
-        
+        background-image: none;        
    }
    
 }
 .searchBar{
-   width: 100vw;
    display: flex;
    flex-flow: row nowrap;
-   padding-left: 135%;
-   margin-top: 10px;   
+   transform: translate(0, -75%);
+   
+         
    @media(max-width: 900px){
-        padding-left: 160%;
+        
    }
     @media(max-width: 620px){
-        padding-left: 135%;
+       
    }
 }
-
-.fav-a{
-    border-radius: 15px;
-    padding: 0;
-    margin: 0;
-    background-color: #d3d1d1;
-    color: #d3d1d1;
+.log-sign-btn{
+    color: white;
+    background-color: #1F1D36;
+    border: none;
+    
+    font-weight: bolder;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 .search-input{
     border-radius: 15px;
     padding-left: 15px;
     width: 40vw;
     border: none;
+    max-height: 30px;
 }
 .searchBtn{
     width: 50px;
@@ -57,6 +60,13 @@ export const GlobalStyle = createGlobalStyle`
 .search-i{
    color: white;
    background-color:#1F1D36;
+}
+.fav-a{
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    background-color: #d3d1d1;
+    color: #d3d1d1;
 }
 
 .menu{
@@ -151,19 +161,30 @@ font-size: 10px;
     margin-bottom: 30px;       
 }
 .presentacion-row{
-    padding: 0 3%;
+    padding: 5px;
 }
 .presentacion-div{
     border-radius: 15px;
     display: flex;
     flex-flow: column wrap;
     padding: 5px;  
+   
   
+     /* @media(max-width: 1315px){
+    max-width: 950px;
+ }
+  @media(max-width: 1200px){
+     margin-top: 90px;
+     padding-right: 50px;
+ } */
+
     @media(max-width: 620px){
      margin-top: 90px;
      padding-right: 50px;
  }
 }
+
+
 
 // VideoList ***********
 
@@ -318,7 +339,8 @@ export const VidListDiv = styled.div`
    
      @media(max-width: 1200px){
          flex-wrap: wrap;
-     }
+              }
+              
     
 `
 export const BoxVidDiv = styled.div`
@@ -373,6 +395,57 @@ export const FavItemDiv = styled.div`
 export const FavImg = styled.img`
     border-radius: 15px 15px 0 0;
     width: 100%;
+`
+//// PRESENTACION  *******************
+export const PresDiv = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    max-width: 180px;    
+    margin:5px;
+    padding-bottom: 5px;
+    text-align: center;           
+    flex-shrink: 10;
+    border: 2px solid black;
+    border-radius: 15px;    
+    color: black;
+    background-color: white ;  
+    
+     @media(max-width: 850px){
+    max-width: 120px;
+    }
+       
+`
+
+///////////        REGISTRO ******************
+
+export const MyForm = styled.div`
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    border-radius: 15px; 
+    transform: translate(415%, 30%);
+    z-index: 100;
+
+    @media(max-width: 1000px){
+    transform: translate(150%, 80%);
+}
+`
+export const ModalDiv = styled.div`
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 1000%;
+    height: 3000%;
+    background: rgba(0, 0, 0, 0.7);
+      z-index: 10;
+`
+export const LogSignDiv = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 10;
 `
 
 

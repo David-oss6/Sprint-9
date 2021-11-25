@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { DataContext } from '../aplication/DataContext'
-import { BoxVidDiv, VidListDiv } from './styled'
+import { PresDiv, VidListDiv } from './styled'
 import { Link } from 'react-router-dom'
 
-export default function Presentacion() {
+export default function Recomended() {
     const { state, setState } = useContext(DataContext)
     const [random, setRandom] = useState(null)
 
@@ -40,7 +40,7 @@ export default function Presentacion() {
                 <h2 >Recomended for you</h2>
                 <VidListDiv>
                     {random && random.map((vid) => (
-                        <BoxVidDiv key={vid.id.videoId} >
+                        <PresDiv key={vid.id.videoId} >
                             <div  >
                                 <Link to="/">
                                     <button className="handleSubmitBtn" onClick={() => handleVideoSelect(vid)} >
@@ -55,7 +55,7 @@ export default function Presentacion() {
                                 </i></button>
 
                             </div>
-                        </BoxVidDiv>
+                        </PresDiv>
                     ))
                     }
                 </VidListDiv>

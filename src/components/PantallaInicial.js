@@ -1,22 +1,20 @@
 import React, { useContext } from 'react'
-import MainVideo from "./MainVideo";
-import VideoList from "./VideoList";
-import { DataContext } from '../aplication/DataContext';
-import Presentacion from './Presentacion';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route
-} from "react-router-dom";
+import Recomended from './Recomended'
+
+
+
 
 export default function PantallaInicial() {
-    const { state } = useContext(DataContext)
 
     return (
         <>
+            <div style={{ border: "2px #9AB3F5 solid", padding: "10px", borderRadius: "15px" }}>
 
+                <h1>ReactTube</h1>
+                <p>Please Log In to use The App.</p>
 
-
+            </div>
+            <Recomended />
         </>
     )
 }

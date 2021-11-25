@@ -9,7 +9,12 @@ export const ContextProvider = ({ children }) => {
         mainVideo: null,
         videos: [],
         favoritos: [],
-        viewedHistory: []
+        viewedHistory: [],
+        signUpList: [{
+            name: "asd",
+            password: "asd"
+        }],
+        logIn: false,
     })
 
     useEffect(() => {

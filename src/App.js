@@ -1,37 +1,41 @@
 
-import Cabecera from "./components/Cabecera";
+import Cabecera from "./components/Menu";
 import History from "./components/History";
 import Favorito from './components/Favorito'
 import {
   BrowserRouter as Router,
-  Routes,
+
+  Switch,
   Route
 } from "react-router-dom";
+
 import PantallaInicial from "./components/PantallaInicial";
 import { GlobalStyle } from "./components/styled";
 import MainVideo from "./components/MainVideo";
 import VideoList from "./components/VideoList";
-import Presentacion from "./components/Presentacion";
+import Recomended from "./components/Recomended";
+import SearchBar from "./components/SearchBar";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 function App() {
   return (
     <Router>
       <div className="container-fluid">
-        <div style={{ backgroundColor: "#1F1D36" }} className="row">
+        <div className="row main-row">
           <div className="col-2 cabecera">
             <Cabecera />
           </div>
-
           <div className="col contenido">
-            <Routes>
+            <SearchBar />
+            <Switch>
 
-              <Route path="/" element={<MainVideo />} />
-              <Route path="/" element={<VideoList />} />
-              <Route exact path="/related-videos" element={<Presentacion />} />
+              <Route path="/pantalla-inicial" component={PantallaInicial} />
+              <PrivateRoute path="/recomended" component={Recomended} />
+              <PrivateRoute exact path="/" component={MainVideo} />
 
 
-            </Routes>
+            </Switch>
             <div className="row historial-favoritos " >
               <div className="col-6 bag1" >
                 <History />
@@ -41,7 +45,6 @@ function App() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <GlobalStyle />

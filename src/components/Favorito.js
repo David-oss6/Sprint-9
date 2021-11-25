@@ -26,7 +26,7 @@ export default function Favorito() {
 
     return (
         < >
-            <h2  >Favoritos - {state.favoritos.length}</h2>
+            <h2  >Favoritos - {state.favoritos ? state.favoritos.length : "0"}</h2>
             <a name="favoritos"></a>
             <FavDiv>
                 {
