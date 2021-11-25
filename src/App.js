@@ -16,6 +16,7 @@ import VideoList from "./components/VideoList";
 import Recomended from "./components/Recomended";
 import SearchBar from "./components/SearchBar";
 import PrivateRoute from "./components/PrivateRoute";
+import Menu from "./components/Menu";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
       <div className="container-fluid">
         <div className="row main-row">
           <div className="col-2 cabecera">
-            <Cabecera />
+            <Menu />
           </div>
           <div className="col contenido">
             <SearchBar />

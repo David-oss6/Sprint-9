@@ -38,13 +38,20 @@ export default function SearchBar() {
     }
     return (
         <>
-            <div className="searchBar"  >
-                <input className="search-input" onChange={(event) => setText(event.target.value)} placeholder="Search" type="text" />
-                <Link to="/">
-                    <button className="searchBtn" onClick={(e) => handleSubmit(text)}><i className="fas fa-search search-i"></i></button>
-                </Link>
-                <Registro />
+            <div className="row " style={{ marginBottom: "10px" }}  >
+                <div className="col-9 ">
+
+                    <input className="search-input" onChange={(event) => setText(event.target.value)} placeholder="Search" type="text" />
+                    <Link to="/">
+                        <button className="searchBtn" onClick={(e) => handleSubmit(text)}><i className="fas fa-search search-i"></i></button>
+                    </Link>
+
+                </div>
+                <div className="col-2">
+                    <Registro />
+                </div>
                 {/* <button onClick={() => mostrarLocal()}>ConsoleLog State</button> */}
+
             </div>
         </>
     )
