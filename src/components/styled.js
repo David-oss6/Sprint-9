@@ -174,8 +174,6 @@ font-size: 10px;
  }
 }
 
-
-
 // VideoList ***********
 
 .relatedVideo{
@@ -416,11 +414,14 @@ export const MyForm = styled.div`
     flex-flow: column;
     position: fixed;
     border-radius: 15px; 
-    transform: translate(415%, 30%);
+    transform: translate(200vh, 30%);
     z-index: 100;
 
     @media(max-width: 1000px){
-    transform: translate(150%, 80%);
+    transform: translate(150vh, 80%);
+}
+  @media(max-width: 740px){
+    transform: translate(110vh, 150%);
 }
 `
 export const ModalDiv = styled.div`
@@ -430,7 +431,7 @@ export const ModalDiv = styled.div`
     width: 1000%;
     height: 3000%;
     background: rgba(0, 0, 0, 0.7);
-      z-index: 10;
+      
 `
 export const LogSignDiv = styled.div`
     display: flex;

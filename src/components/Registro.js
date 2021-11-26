@@ -88,7 +88,7 @@ export default function Registro() {
                         {
                             signUp &&
                             <ModalDiv  >
-                                <MyForm onClick={() => setSignUp(false)} >
+                                <MyForm onClick={() => setLog(false)} >
                                     <input
                                         onInput={(event) => setNombre(event.target.value)}
                                         maxLength="8"
