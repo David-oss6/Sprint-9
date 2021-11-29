@@ -414,14 +414,14 @@ export const MyForm = styled.div`
     flex-flow: column;
     position: fixed;
     border-radius: 15px; 
-    transform: translate(200vh, 30%);
+    transform: translate(110vh, 30%);
     z-index: 100;
 
     @media(max-width: 1000px){
-    transform: translate(150vh, 80%);
+    transform: translate(100vh, 80%);
 }
   @media(max-width: 740px){
-    transform: translate(110vh, 150%);
+    transform: translate(75vh, 150%);
 }
 `
 export const ModalDiv = styled.div`
