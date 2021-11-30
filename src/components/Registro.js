@@ -70,7 +70,7 @@ export default function Registro() {
                 setSignUp(!signUp)
         }
     }
-
+    // 
     return (
         <div>
 
