@@ -423,6 +423,9 @@ export const MyForm = styled.div`
   @media(max-width: 740px){
     transform: translate(75vh, 150%);
 }
+@media(max-width: 550px){
+    transform: translate(45vh, 150%);
+}
 `
 export const ModalDiv = styled.div`
     position: fixed;

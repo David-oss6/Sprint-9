@@ -13,12 +13,11 @@ export default function Registro() {
     const { state, setState } = useContext(DataContext)
 
     const defineUser = () => {
-        console.log(nombre, pass, check)
+
         if (pass === check) {
-            console.log("ok pass")
-            console.log(state.signUpList)
+
             const okName = state.signUpList.find((el) => (el.name === nombre))
-            console.log(okName)
+
             if (okName === undefined) {
                 const newUser = {
                     name: nombre,
