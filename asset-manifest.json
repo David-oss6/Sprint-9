@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/sprint-9/static/js/main.546fec03.chunk.js",
+    "main.js.map": "/sprint-9/static/js/main.546fec03.chunk.js.map",
+    "runtime-main.js": "/sprint-9/static/js/runtime-main.2bc71f3d.js",
+    "runtime-main.js.map": "/sprint-9/static/js/runtime-main.2bc71f3d.js.map",
+    "static/js/2.4cca26dd.chunk.js": "/sprint-9/static/js/2.4cca26dd.chunk.js",
+    "static/js/2.4cca26dd.chunk.js.map": "/sprint-9/static/js/2.4cca26dd.chunk.js.map",
+    "index.html": "/sprint-9/index.html",
+    "static/js/2.4cca26dd.chunk.js.LICENSE.txt": "/sprint-9/static/js/2.4cca26dd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bc71f3d.js",
+    "static/js/2.4cca26dd.chunk.js",
+    "static/js/main.546fec03.chunk.js"
+  ]
+}
